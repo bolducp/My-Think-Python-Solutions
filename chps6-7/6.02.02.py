@@ -1,3 +1,7 @@
+"""Use incremental development to write a function called hypotenuse
+that returns the length of the hypotenuse of a right triangle given
+the lengths of the two legs as arguments."""
+
 import math
 
 def hypotenuse(leg_a, leg_b):

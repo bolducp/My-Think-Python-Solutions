@@ -1,3 +1,12 @@
+"""To test the square root algorithm in this chapter, you could compare
+it with math.sqrt. Write a function named test_square_root that prints a table.
+
+The first column is a number, a; the second column is the square root of a
+computed with the function from Section 7.5; the third column is the square root
+computed by math.sqrt; the fourth column is the absolute value of the difference
+between the two estimates."""
+
+
 import math
 
 def square_root(a):
