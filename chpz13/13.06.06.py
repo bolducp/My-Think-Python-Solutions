@@ -1,5 +1,11 @@
+"""Python provides a data structure called set that provides
+many common set operations. Read the documentation at
+http://docs.python.org/2/library/stdtypes.html#types-set and
+write a program that uses set subtraction to find words in
+the book that are not in the word list. """
+
+
 import string
-from bisect import bisect_left
 
 def make_wordlist(file):
     result = []
@@ -12,12 +18,7 @@ def make_wordlist(file):
 wordlist = make_wordlist("words.txt")
 
 
-def in_bisect(word_list, word):
-    i = bisect_left(word_list, word)
-    return i != len(word_list) and word_list[i] == word
-
-
-def find_words_not_in_wordlist(a_file, wordlist, start_line=1):
+def find_words_not_in_wordlist2(a_file, wordlist, start_line=1):
     new_text = []
     fin = open(a_file)
     lines = fin.readlines()
@@ -33,12 +34,7 @@ def find_words_not_in_wordlist(a_file, wordlist, start_line=1):
     for word in new_text:
         word_count_dict[word] = word_count_dict.get(word, 0) + 1
 
-    not_in_wordlist = []
-    print word_count_dict.keys()
+    not_in_wordlist = list(set(word_count_dict.keys()) - set(wordlist))
 
-    for item in word_count_dict.keys():
-        if not in_bisect(wordlist, item):
-            not_in_wordlist += [item]
     return not_in_wordlist
 
-print find_words_not_in_wordlist("smalljane.txt", wordlist, 71)
