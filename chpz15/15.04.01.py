@@ -19,5 +19,5 @@ second_point.y = 15.0
 def distance_between_points(p1, p2):
     return math.sqrt((p1.x - p2.x)**2 + (p1.y - p2.y)**2)
 
-
 print distance_between_points(first_point, second_point)
+
