@@ -1,6 +1,6 @@
 # My-Think-Python-Solutions 
 
-These are my attempts at solutions to the exercises in Allen Downey's free online textbook, Think Python. 
+These are my attempts at solutions to the exercises in Allen Downey's free online textbook, Think Python. (Found at: http://www.greenteapress.com/thinkpython/)
 
 They are organized by chapter. Each file is titled by the chapter number.section number.exercise number. So, for example, 6.04.03.py is my solution for Chapter 6, Section 4, Exercise number 3.
 
